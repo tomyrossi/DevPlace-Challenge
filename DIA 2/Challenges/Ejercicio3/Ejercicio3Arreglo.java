@@ -1,64 +1,47 @@
-package Ejercicio3;
+package Ejercicio1;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class Ejercicio3Arreglo {
+public class Ejercicio1Calculadora {
 	public static void main (String [] args) {
-		int numero;
-		int [] arreglo = new int[10];
+		
+		float numero1,numero2,resultado;
+		char operacion;
 		Scanner teclado = new Scanner(System.in);
+		resultado=0;
 		
-		for (int pos=0; pos<arreglo.length;pos++) {
-			System.out.print("Ingrese el valor de la posicion "+ pos +" =");
-			numero=teclado.nextInt();
-			arreglo[pos]=numero;
-		}
-		mostrarNumeroMayor(arreglo);
-		mostrarNumeroMenor(arreglo);
-		mostrarNumerosPares(arreglo);
-		mostrarNumerosImpares(arreglo);
-		ordenarAscendente(arreglo);
+		System.out.println("=====CALCULADORA======");
+		System.out.print("Ingrese el numero 1 = ");
+		numero1=teclado.nextFloat();
+		System.out.print("Ingrese el numero 2 = ");
+		numero2=teclado.nextFloat();
+		System.out.println("=========================");
 		
+		System.out.print("Ingrese la operacion que desea realizar (+, -, *, /): ");
+		operacion=teclado.next().charAt(0);
+		switch(operacion) {
+		case '+' : {
+			resultado=numero1+numero2;
+			break;
+		}
+		case '-' : {
+			resultado=numero1-numero2;
+			break;
+		}
+		case '*' : {
+			resultado=numero1*numero2;
+			break;
+		}
+		case '/' : {
+			resultado=numero1/numero2;
+			break;
+		}
+		default : {
+			System.out.println("No ingreso una operacion valida");
+			break;
+		}
+		}
+		System.out.print(numero1 + " " + operacion + " " + numero2 + " = " + resultado);
 		
 	}
-	
-	private static void mostrarNumeroMayor(int [] t) {
-		int mayor=t[0];
-		for (int p=0;p<t.length;p++) {
-			if (t[p] > mayor) mayor=t[p];
-		}
-		System.out.println("# El numero MAYOR del arreglo es= "+mayor);
-	}
-	
-	private static void mostrarNumeroMenor(int [] t) {
-		int menor=t[0];
-		for (int p=0;p<t.length;p++) {
-			if (t[p] < menor) menor=t[p];
-		}
-		System.out.println("# El numero MENOR del arreglo es= "+menor);
-	}
-	private static void mostrarNumerosPares(int [] t) {
-		System.out.println("NUMEROS PARES");
-		for (int p=0;p<t.length;p++) {
-			if (t[p]%2 == 0) System.out.print(t[p]);
-		}	
-		System.out.println("");
-	}
-	private static void mostrarNumerosImpares(int [] t) {
-		System.out.println("NUMEROS IMPARES");
-		for (int p=0;p<t.length;p++) {
-			if (t[p]%2 != 0) System.out.print(t[p]);
-		}	
-		System.out.println("");
-	}
-	private static void ordenarAscendente(int [] t) {
-		Arrays.sort(t);
-		System.out.println("El arreglo ordenado de forma ascendiente queda asi=");
-		for (int i=0;i<t.length;i++){
-			System.out.print(t[i]);
-		}
-	}
-	
-	
 }
