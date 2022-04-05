@@ -6,7 +6,7 @@ public class Ejercicio1Calculadora {
 	public static void main (String [] args) {
 		
 		float numero1,numero2,resultado;
-		String operacion;
+		char operacion;
 		Scanner teclado = new Scanner(System.in);
 		resultado=0;
 		
@@ -18,21 +18,21 @@ public class Ejercicio1Calculadora {
 		System.out.println("=========================");
 		
 		System.out.print("Ingrese la operacion que desea realizar (+, -, *, /): ");
-		operacion=teclado.next();
+		operacion=teclado.next().charAt(0);
 		switch(operacion) {
-		case "+" : {
+		case '+' : {
 			resultado=numero1+numero2;
 			break;
 		}
-		case "-" : {
+		case '-' : {
 			resultado=numero1-numero2;
 			break;
 		}
-		case "*" : {
+		case '*' : {
 			resultado=numero1*numero2;
 			break;
 		}
-		case "/" : {
+		case '/' : {
 			resultado=numero1/numero2;
 			break;
 		}
