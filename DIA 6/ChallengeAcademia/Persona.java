@@ -7,30 +7,33 @@ public abstract class Persona {
 	protected String apellido;
 	protected int nroId;
 	protected String estadoCivil;
+	
+	
+	public Persona(String nombre, String apellido, int nroId, String estadoCivil) {
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.nroId = nroId;
+		this.estadoCivil = estadoCivil;
+	}
+	
 	public String getNombre() {
 		return nombre;
 	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	public String getApellido() {
+		public String getApellido() {
 		return apellido;
-	}
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
 	}
 	public int getNroId() {
 		return nroId;
 	}
-	public void setNroId(int nroId) {
-		this.nroId = nroId;
-	}
 	public String getEstadoCivil() {
 		return estadoCivil;
 	}
+	
 	public void setEstadoCivil(String estadoCivil) {
 		this.estadoCivil = estadoCivil;
 	}
+	
+	public abstract String toString();
 	
 	
 }

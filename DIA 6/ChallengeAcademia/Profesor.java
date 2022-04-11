@@ -5,13 +5,8 @@ public class Profesor extends Empleado{
 		//Atributos
 	protected String departamento;
 	
-	public Profesor(String nombre,String apellido,int nroId,String estadoCivil,int añoIncorporacion, int nroDepacho, String departamento) {
-		this.nombre=nombre;
-		this.apellido=apellido;
-		this.nroId=nroId;
-		this.estadoCivil=estadoCivil;
-		this.nroDespacho=nroDepacho;
-		this.añoIncorporacion=añoIncorporacion;
+	public Profesor(String nombre,String apellido,int nroId,String estadoCivil, int nroDespacho,int añoIncorporacion, String departamento) {
+		super(nombre,apellido,nroId,estadoCivil,nroDespacho,añoIncorporacion);
 		this.departamento=departamento;
 	}
 
@@ -30,7 +25,4 @@ public class Profesor extends Empleado{
 				+ ", departamento=" + departamento + "]";
 	}
 
-
-	
-	
 }

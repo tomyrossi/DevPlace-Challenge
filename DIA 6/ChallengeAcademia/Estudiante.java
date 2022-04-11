@@ -6,10 +6,7 @@ public class Estudiante extends Persona{
 	protected String curso;
 	
 	public Estudiante(String nombre,String apellido,int nroId,String estadoCivil,String curso) {
-		this.nombre=nombre;
-		this.apellido=apellido;
-		this.nroId=nroId;
-		this.estadoCivil=estadoCivil;
+		super(nombre,apellido,nroId,estadoCivil);
 		this.curso=curso;
 	}
 	

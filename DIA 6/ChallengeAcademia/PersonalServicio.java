@@ -5,13 +5,8 @@ public class PersonalServicio extends Empleado{
 	//Atributo
 	protected String seccion;
 
-	public PersonalServicio(String nombre,String apellido,int nroId,String estadoCivil,int añoIncorporacion, int nroDepacho, String seccion) {
-		this.nombre=nombre;
-		this.apellido=apellido;
-		this.nroId=nroId;
-		this.estadoCivil=estadoCivil;
-		this.nroDespacho=nroDepacho;
-		this.añoIncorporacion=añoIncorporacion;
+	public PersonalServicio(String nombre,String apellido,int nroId,String estadoCivil,int añoIncorporacion, int nroDespacho, String seccion) {
+		super(nombre,apellido,nroId,estadoCivil,nroDespacho,añoIncorporacion);
 		this.seccion = seccion;
 	}
 
