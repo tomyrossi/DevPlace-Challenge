@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "625872381ce39def1e7a0052"
+  },
+  "Direccion": "Sarmiento 256",
+  "Nombre": "Esteban"
+},{
+  "_id": {
+    "$oid": "625876f997cbf1133539365c"
+  },
+  "Nombre": "Santiago",
+  "Altura": 1.65
+},{
+  "_id": {
+    "$oid": "6258782f97cbf1133539365d"
+  },
+  "Nombre": "Tomas",
+  "Altura": 1.65
+},{
+  "_id": {
+    "$oid": "6258785997cbf1133539365e"
+  },
+  "Nombre": "Tomas",
+  "Altura": 1.85
+},{
+  "_id": {
+    "$oid": "625881c397cbf1133539365f"
+  },
+  "Nombre": "Juan",
+  "Altura": 1.45
+}]
